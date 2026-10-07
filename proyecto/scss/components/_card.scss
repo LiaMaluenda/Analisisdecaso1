@@ -1,0 +1,93 @@
+.card {
+  width: 300px;
+  background-color: $color-blanco;
+  border-radius: $borde-redondeado;
+  overflow: hidden;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+
+  &__imagen {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 160px;
+    font-size: 36px;
+    font-weight: bold;
+    color: $color-blanco;
+    background: linear-gradient(135deg, $color-principal, $color-fondo-principal);
+  }
+
+  &__contenido {
+    padding: $espacio-medio;
+  }
+
+  &__etiqueta {
+    display: inline-block;
+    padding: 4px $espacio-chico;
+    margin-bottom: $espacio-chico;
+    font-size: $tamano-chico;
+    color: $color-principal;
+    background-color: #f6e6f0;
+    border-radius: 20px;
+  }
+
+  &__titulo {
+    font-size: $tamano-titulo;
+    margin-bottom: $espacio-chico;
+  }
+
+  &__descripcion {
+    color: $color-texto-suave;
+    line-height: 1.5;
+    margin-bottom: $espacio-medio;
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: $espacio-medio;
+  }
+
+  &__dato {
+    font-size: $tamano-chico;
+    color: $color-texto-suave;
+  }
+
+  &__boton {
+    display: block;
+    padding: 10px;
+    text-align: center;
+    color: $color-blanco;
+    background-color: $color-principal;
+    border-radius: 8px;
+
+    &:hover {
+      background-color: $color-principal-oscuro;
+    }
+
+    &--secundario {
+      background-color: $color-secundario;
+
+      &:hover {
+        background-color: $color-secundario-oscuro;
+      }
+    }
+  }
+
+  &--destacada {
+    border: 3px solid $color-acento;
+
+    .card__imagen {
+      background: linear-gradient(135deg, $color-secundario, $color-acento);
+    }
+
+    .card__etiqueta {
+      color: $color-texto;
+      background-color: $color-acento;
+    }
+  }
+}

@@ -1,0 +1,30 @@
+body {
+  font-family: $fuente-principal;
+  font-size: $tamano-texto;
+  color: $color-texto;
+  background-color: $color-fondo-principal;
+}
+
+.encabezado {
+  padding: 40px $espacio-medio 0;
+  text-align: center;
+  color: $color-blanco;
+
+  &__titulo {
+    font-size: 32px;
+    margin-bottom: $espacio-chico;
+  }
+
+  &__texto {
+    color: $color-acento;
+  }
+}
+
+.contenedor {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: $espacio-grande;
+  padding: 40px $espacio-medio;
+}
